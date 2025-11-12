@@ -7,6 +7,7 @@ class NotesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(bottom: 20),
       width: double.infinity,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 240, 211, 107),
@@ -24,6 +25,7 @@ class NotesItem extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     color: Color.fromARGB(255, 0, 0, 0),
+                    //fontWeight: FontWeight.bold,
                   ),
                 ),
                 Spacer(),
