@@ -9,6 +9,7 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       style: TextStyle(fontSize: 16.0),
       maxLines: maxLines,
+      cursorColor: Colors.white,
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyle(color: Colors.grey, fontSize: 14),
