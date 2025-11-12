@@ -13,9 +13,15 @@ class NotesView extends StatelessWidget {
         backgroundColor: const Color.fromARGB(255, 68, 65, 65),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             context: context,
             builder: (context) {
-              return const AddNoteBottomSheet();
+              return Padding(
+                padding: EdgeInsets.only(
+                  bottom: MediaQuery.of(context).viewInsets.bottom,
+                ),
+                child: const AddNoteBottomSheet(),
+              );
             },
           );
         },
