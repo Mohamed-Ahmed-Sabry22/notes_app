@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomAddButton extends StatelessWidget {
-  const CustomAddButton({super.key});
-
+  const CustomAddButton({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: 40,
