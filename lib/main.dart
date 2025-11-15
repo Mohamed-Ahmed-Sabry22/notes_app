@@ -1,6 +1,7 @@
 import 'package:_10_note_app/constants.dart';
 import 'package:_10_note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:_10_note_app/models/note_model.dart';
+import 'package:_10_note_app/simple_bloc_observer.dart';
 import 'package:_10_note_app/views/notes_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -15,6 +16,7 @@ void main() async {
       statusBarIconBrightness: Brightness.light,
     ),
   );
+  Bloc.observer = SimpleBlocObserver();
   await Hive.initFlutter();
   await Hive.openBox(kNotesBox);
   Hive.registerAdapter(NoteModelAdapter());
