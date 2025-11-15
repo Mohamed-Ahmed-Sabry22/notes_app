@@ -1,4 +1,4 @@
-import 'package:_10_note_app/views/widgets/note_bottom_sheet.dart';
+import 'package:_10_note_app/views/widgets/add_note_bottom_sheet.dart';
 import 'package:_10_note_app/views/widgets/notes_view_body.dart';
 import 'package:flutter/material.dart';
 
