@@ -43,7 +43,9 @@ class NotesItem extends StatelessWidget {
                   ),
                   Spacer(),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      note.delete();
+                    },
                     child: const Icon(
                       FontAwesomeIcons.trash,
                       size: 26,
