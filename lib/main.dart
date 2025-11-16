@@ -1,4 +1,5 @@
 import 'package:_10_note_app/constants.dart';
+import 'package:_10_note_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:_10_note_app/models/note_model.dart';
 import 'package:_10_note_app/simple_bloc_observer.dart';
 import 'package:_10_note_app/views/notes_view.dart';
@@ -27,10 +28,13 @@ class NotesApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
-      debugShowCheckedModeBanner: false,
-      home: const NotesView(),
+    return BlocProvider(
+      create: (context) => NotesCubit(),
+      child: MaterialApp(
+        theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Poppins'),
+        debugShowCheckedModeBanner: false,
+        home: const NotesView(),
+      ),
     );
   }
 }
