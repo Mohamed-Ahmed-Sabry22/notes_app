@@ -29,7 +29,7 @@ class NotesItem extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: const EdgeInsets.all(18.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,9 +38,8 @@ class NotesItem extends StatelessWidget {
                   Text(
                     note.title,
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 26,
                       color: Color.fromARGB(255, 0, 0, 0),
-                      //fontWeight: FontWeight.bold,
                     ),
                   ),
                   Spacer(),
@@ -51,18 +50,18 @@ class NotesItem extends StatelessWidget {
                     },
                     child: const Icon(
                       FontAwesomeIcons.trash,
-                      size: 26,
+                      size: 22,
                       color: Colors.black,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 25),
+              SizedBox(height: 10),
               Text(
                 note.subTitle,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
-                  fontSize: 20,
+                  fontSize: 16,
                 ),
               ),
               const SizedBox(height: 20),
@@ -72,7 +71,7 @@ class NotesItem extends StatelessWidget {
                   note.date,
                   style: TextStyle(
                     color: Colors.black.withOpacity(0.6),
-                    fontSize: 14,
+                    fontSize: 12,
                   ),
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:_10_note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:_10_note_app/models/note_model.dart';
+import 'package:_10_note_app/views/widgets/colors_list_view.dart';
 import 'package:_10_note_app/views/widgets/custom_add_button.dart';
 import 'package:_10_note_app/views/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,8 @@ class _AddNoteFormState extends State<AddNoteForm> {
               subTitle = value;
             },
           ),
-          const SizedBox(height: 28),
+          //const SizedBox(height: 28),
+          ColorsListView(),
           BlocBuilder<AddNoteCubit, AddNoteState>(
             builder: (context, state) {
               return CustomAddButton(
